@@ -1,4 +1,7 @@
-﻿using System.ComponentModel;
+﻿using bytePassion.Library.Essentials.WpfTools.Positioning;
+using System.ComponentModel;
+
+#pragma warning disable 0067
 
 namespace WPF_Example.ViewModels.ConverterAndBehaviorExample
 {
@@ -6,12 +9,12 @@ namespace WPF_Example.ViewModels.ConverterAndBehaviorExample
     {
         public ConverterAndBehaviorExampleViewModelSampleData()
         {
-            SizeOutput = "100 x 200 px";
+            Size = new Size(new Width(200), new Height(100));
         }
 
-        public string SizeOutput { get; set; }
+        public Size Size { get; set; }
 
-        public void                              Dispose() { }
+        public void Dispose() { }
         public event PropertyChangedEventHandler PropertyChanged;
     }
 }

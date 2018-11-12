@@ -1,16 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using bytePassion.Library.Essentials.Tools.FrameworkExtensions;
+using bytePassion.Library.Essentials.WpfTools.Positioning;
 using bytePassion.Library.Essentials.WpfTools.ViewModelBase.Standard;
+using System.ComponentModel;
 
 namespace WPF_Example.ViewModels.ConverterAndBehaviorExample
 {
     internal class ConverterAndBehaviorExampleViewModel: ViewModel, IConverterAndBehaviorExampleViewModel
     {
-        public string SizeOutput { get; set; }
+        private Size size;
+
+        public ConverterAndBehaviorExampleViewModel()
+        {
+            size = Size.Zero;
+        }
+
+        public Size Size
+        {
+            get => size;
+            set => PropertyChanged.ChangeAndNotify(this, ref size, value);
+        }
 
         protected override void CleanUp() {}
         public override event PropertyChangedEventHandler PropertyChanged;

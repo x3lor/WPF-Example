@@ -1,9 +1,10 @@
-﻿using bytePassion.Library.Essentials.WpfTools.ViewModelBase.Standard;
+﻿using bytePassion.Library.Essentials.WpfTools.Positioning;
+using bytePassion.Library.Essentials.WpfTools.ViewModelBase.Standard;
 
 namespace WPF_Example.ViewModels.ConverterAndBehaviorExample
 {
     internal interface IConverterAndBehaviorExampleViewModel : IViewModel
     {
-        string SizeOutput { get; set; }
+        Size Size { get; set; }        
     }
 }
