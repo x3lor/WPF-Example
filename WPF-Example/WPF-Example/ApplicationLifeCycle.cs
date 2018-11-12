@@ -1,5 +1,6 @@
 ﻿using bytePassion.Library.Essentials.WpfTools.Application;
 using System.Windows;
+using WPF_Example.ViewModels.MainWindow;
 
 namespace WPF_Example
 {
@@ -7,7 +8,12 @@ namespace WPF_Example
     {
         public void Startup(StartupEventArgs startupEventArgs)
         {
-            var mainWindow = new MainWindow();
+            var mainWindowViewModel = new MainWindowViewModel("Run-Time-Title");
+
+            var mainWindow = new MainWindow
+                             {
+                                 DataContext = mainWindowViewModel
+                             };
 
             mainWindow.Show();
         }
