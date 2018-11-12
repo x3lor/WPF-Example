@@ -38,6 +38,9 @@
                                            Grid.Row="1"
                                            DataContext="{Binding ConverterAndBehaviorExampleViewModel}"/>
 
-
+        <views:ListExample Grid.Column="1"
+                           Grid.Row="3"
+                           Grid.ColumnSpan="3"
+                           DataContext="{Binding ListExampleViewModel}"/>
     </Grid>
 </Window>

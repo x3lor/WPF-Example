@@ -2,6 +2,7 @@
 using System.Windows;
 using WPF_Example.ViewModels.CommandExample;
 using WPF_Example.ViewModels.ConverterAndBehaviorExample;
+using WPF_Example.ViewModels.ListExample;
 using WPF_Example.ViewModels.MainWindow;
 
 namespace WPF_Example
@@ -10,11 +11,13 @@ namespace WPF_Example
     {
         public void Startup(StartupEventArgs startupEventArgs)
         {
+            var listExampleViewModel = new ListExampleViewModel();
             var converterAndBehaviorExampleViewModel = new ConverterAndBehaviorExampleViewModel();
             var commandExampleViewModel = new CommandExampleViewModel();
             var mainWindowViewModel = new MainWindowViewModel("Run-Time-Title",
                                                               commandExampleViewModel,
-                                                              converterAndBehaviorExampleViewModel);
+                                                              converterAndBehaviorExampleViewModel,
+                                                              listExampleViewModel);
 
             var mainWindow = new MainWindow
                              {

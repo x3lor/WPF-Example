@@ -63,6 +63,9 @@
     <Compile Include="ViewModels\ConverterAndBehaviorExample\ConverterAndBehaviorExampleViewModel.cs" />
     <Compile Include="ViewModels\ConverterAndBehaviorExample\ConverterAndBehaviorExampleViewModelSampleData.cs" />
     <Compile Include="ViewModels\ConverterAndBehaviorExample\IConverterAndBehaviorExampleViewModel.cs" />
+    <Compile Include="ViewModels\ListExample\IListExampleViewModel.cs" />
+    <Compile Include="ViewModels\ListExample\ListExampleViewModel.cs" />
+    <Compile Include="ViewModels\ListExample\ListExampleViewModelSampleData.cs" />
     <Compile Include="ViewModels\MainWindow\IMainWindowViewModel.cs" />
     <Compile Include="ViewModels\MainWindow\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\MainWindow\MainWindowViewModelSampleData.cs" />
@@ -71,6 +74,9 @@
     </Compile>
     <Compile Include="Views\ConverterAndBehaviorExample.xaml.cs">
       <DependentUpon>ConverterAndBehaviorExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListExample.xaml.cs">
+      <DependentUpon>ListExample.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -90,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConverterAndBehaviorExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListExample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
