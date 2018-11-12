@@ -1,6 +1,7 @@
 ﻿using bytePassion.Library.Essentials.WpfTools.Application;
 using System.Windows;
 using WPF_Example.ViewModels.CommandExample;
+using WPF_Example.ViewModels.ConverterAndBehaviorExample;
 using WPF_Example.ViewModels.MainWindow;
 
 namespace WPF_Example
@@ -9,9 +10,11 @@ namespace WPF_Example
     {
         public void Startup(StartupEventArgs startupEventArgs)
         {
+            var converterAndBehaviorExampleViewModel = new ConverterAndBehaviorExampleViewModel();
             var commandExampleViewModel = new CommandExampleViewModel();
             var mainWindowViewModel = new MainWindowViewModel("Run-Time-Title",
-                                                              commandExampleViewModel);
+                                                              commandExampleViewModel,
+                                                              converterAndBehaviorExampleViewModel);
 
             var mainWindow = new MainWindow
                              {
@@ -23,7 +26,7 @@ namespace WPF_Example
 
         public void SessionEnding(SessionEndingCancelEventArgs sessionEndingCancelEventArgs)
         {
-            // Here I could prevent for the app to close
+            // Here I could prevent for the app from closing
         }
 
         public void Exit(ExitEventArgs exitEventArgs)

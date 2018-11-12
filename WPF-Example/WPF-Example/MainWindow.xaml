@@ -33,6 +33,11 @@
         <views:CommandExample Grid.Column="1"
                               Grid.Row="1"
                               DataContext="{Binding CommandExampleViewModel}"/>
+        
+        <views:ConverterAndBehaviorExample Grid.Column="3" 
+                                           Grid.Row="1"
+                                           DataContext="{Binding ConverterAndBehaviorExampleViewModel}"/>
+
 
     </Grid>
 </Window>
