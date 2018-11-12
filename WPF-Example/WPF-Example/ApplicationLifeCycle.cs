@@ -1,5 +1,6 @@
 ﻿using bytePassion.Library.Essentials.WpfTools.Application;
 using System.Windows;
+using WPF_Example.ViewModels.CommandExample;
 using WPF_Example.ViewModels.MainWindow;
 
 namespace WPF_Example
@@ -8,7 +9,9 @@ namespace WPF_Example
     {
         public void Startup(StartupEventArgs startupEventArgs)
         {
-            var mainWindowViewModel = new MainWindowViewModel("Run-Time-Title");
+            var commandExampleViewModel = new CommandExampleViewModel();
+            var mainWindowViewModel = new MainWindowViewModel("Run-Time-Title",
+                                                              commandExampleViewModel);
 
             var mainWindow = new MainWindow
                              {

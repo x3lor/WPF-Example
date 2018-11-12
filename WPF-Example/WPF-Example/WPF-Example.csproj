@@ -55,9 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\CommandExample\CommandExampleViewModel.cs" />
+    <Compile Include="ViewModels\CommandExample\CommandExampleViewModelSampleData.cs" />
+    <Compile Include="ViewModels\CommandExample\ICommandExampleViewModel.cs" />
     <Compile Include="ViewModels\MainWindow\IMainWindowViewModel.cs" />
     <Compile Include="ViewModels\MainWindow\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\MainWindow\MainWindowViewModelSampleData.cs" />
+    <Compile Include="Views\CommandExample.xaml.cs">
+      <DependentUpon>CommandExample.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +77,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\CommandExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

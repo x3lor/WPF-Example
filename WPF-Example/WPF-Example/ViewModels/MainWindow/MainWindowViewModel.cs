@@ -1,19 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using bytePassion.Library.Essentials.WpfTools.ViewModelBase.Standard;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using bytePassion.Library.Essentials.WpfTools.ViewModelBase.Standard;
+using WPF_Example.ViewModels.CommandExample;
+
+#pragma warning disable 0067
 
 namespace WPF_Example.ViewModels.MainWindow
 {
     internal class MainWindowViewModel : ViewModel, IMainWindowViewModel
     {
-        public MainWindowViewModel(string title)
+        public MainWindowViewModel(string title, 
+                                   ICommandExampleViewModel commandExampleViewModel)
         {
             Title = title;
+            CommandExampleViewModel = commandExampleViewModel;
         }
+
+        public ICommandExampleViewModel CommandExampleViewModel { get; }
 
         public string Title { get; }
         
