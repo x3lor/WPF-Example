@@ -1,5 +1,6 @@
 ﻿using bytePassion.Library.Essentials.WpfTools.Application;
 using System.Windows;
+using WPF_Example.DataService;
 using WPF_Example.ViewModels.CommandExample;
 using WPF_Example.ViewModels.ConverterAndBehaviorExample;
 using WPF_Example.ViewModels.ListExample;
@@ -11,7 +12,9 @@ namespace WPF_Example
     {
         public void Startup(StartupEventArgs startupEventArgs)
         {
-            var listExampleViewModel = new ListExampleViewModel();
+            var dataProvider = new ExampleDataProvider();
+                 
+            var listExampleViewModel = new ListExampleViewModel(dataProvider);
             var converterAndBehaviorExampleViewModel = new ConverterAndBehaviorExampleViewModel();
             var commandExampleViewModel = new CommandExampleViewModel();
             var mainWindowViewModel = new MainWindowViewModel("Run-Time-Title",

@@ -57,6 +57,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\SizePrettyPrintConverter.cs" />
+    <Compile Include="DataService\ExampleDataProvider.cs" />
+    <Compile Include="DataService\IDataProvider.cs" />
+    <Compile Include="Models\DataItem.cs" />
+    <Compile Include="Models\ItemType.cs" />
+    <Compile Include="Models\TypeAItem.cs" />
+    <Compile Include="Models\TypeBItem.cs" />
+    <Compile Include="TemplateSelectors\ItemTemplateSelector.cs" />
     <Compile Include="ViewModels\CommandExample\CommandExampleViewModel.cs" />
     <Compile Include="ViewModels\CommandExample\CommandExampleViewModelSampleData.cs" />
     <Compile Include="ViewModels\CommandExample\ICommandExampleViewModel.cs" />
